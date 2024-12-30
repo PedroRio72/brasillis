@@ -1,0 +1,8 @@
+{
+  "extends": ["eslint:recommended", "plugin:angular/johnpapa"],
+  "rules": {
+    "angular/no-inline-template": "off",
+    "angular/no-http": "error",
+    "angular/no-controller": "warn"
+  }
+}

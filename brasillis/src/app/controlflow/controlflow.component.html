@@ -1,0 +1,26 @@
+@if(media>=7) {
+<p>Aprovado</p>
+}@else if(media>=5){
+<p>Recuperação</p>
+}@else{
+<p>Reprovado</p>
+}
+<div>
+  <ul>
+    @for (n of nomes; track $index) {
+    <li>{{ $index }} - {{ n }}</li>
+    }
+  </ul>
+</div>
+
+<div>
+  @switch (linguagem) { @case ('HTML') {
+  <p>Linguagem de Marcação</p>
+  } @case ('CSS') {
+  <p>Linguagem de Estilo</p>
+  } @case ('JS') {
+  <p>Linguagem de Programação</p>
+  } @default {
+  <p>Linguagem não encontrada</p>
+  } }
+</div>

@@ -1,0 +1,65 @@
+<form [formGroup]="formulario">
+    <!-- NOME -->
+
+    <input type="text" name="nome" formControlName="nome" placeholder="nome" class="form-control" />
+    @if (formulario.get('nome').hasError('required')&&formulario.get('nome').touched) {
+    <div class="msgvalidaform">O campo nome é obrigatório.</div>
+    }
+    @if (formulario.get('nome').hasError('minlength')&&formulario.get('nome').touched) {
+    <div class="msgvalidaform">O campo nome precisa conter pelo menos 5 caracteres.</div>
+    }
+
+    <!-- IDADE -->
+    <input type="number" name="idade" formControlName="idade" placeholder="idade" class="form-control" />
+    @if (formulario.get('idade').hasError('required')&&formulario.get('idade').touched) {
+    <div class="msgvalidaform">O campo idade é obrigatório.</div>
+    }
+    @if (formulario.get('idade').hasError('min')&&formulario.get('idade').touched) {
+    <div class="msgvalidaform">Idade mínima 18 anos.</div>
+    }
+    @if (formulario.get('idade').hasError('max')&&formulario.get('idade').touched) {
+    <div class="msgvalidaform">Idade máxima 120 anos.</div>
+    }
+
+    <!-- CIDADE -->
+    <input type="text" name="cidade" formControlName="cidade" placeholder="cidade" class="form-control" />
+    @if (formulario.get('cidade').hasError('required')&&formulario.get('cidade').touched) {
+    <div class="msgvalidaform">O campo cidade é obrigatório.</div>
+    }
+    @if (formulario.get('cidade').hasError('minlength')&&formulario.get('cidade').touched) {
+    <div class="msgvalidaform">O campo cidade precisa conter pelo menos 5 caracteres.</div>
+    }
+
+    @if (blnCadastrar) {
+    <input type="button" value="Cadastrar" (click)="incluir()" class="btn btn-primary"
+        [disabled]="formulario.invalid" />
+    }@else{
+    <input type="button" value="Alterar" (click)="alterar()" class="btn btn-primary" [disabled]="formulario.invalid" />
+    <input type="button" value="Remover" (click)="remover()" class="btn btn-primary" />
+    <input type="button" value="Cancelar" (click)="cancelar()" class="btn btn-primary" />
+    }
+
+</form>
+
+<table class="tabela">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Cidade</th>
+            <th>Selecionar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cli of clientes; index as i">
+            <td>{{i+1}}</td>
+            <td>{{cli.nome | uppercase}}</td>
+            <td>{{cli.idade |percent}}</td>
+            <td>{{cli.cidade}}</td>
+            <td><!-- Ícone de edição -->
+                <i class="fas fa-edit" style="cursor: pointer;" (click)="selecionar(i)"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>

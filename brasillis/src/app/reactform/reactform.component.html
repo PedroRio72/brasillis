@@ -1,0 +1,7 @@
+<p>{{ formulario.value.nome }}</p>
+<p>{{ formulario.value.cidade }}</p>
+
+<form [formGroup]="formulario">
+  <input type="text" name="nome" formControlName="nome" />
+  <input type="text" name="cidade" formControlName="cidade" />
+</form>

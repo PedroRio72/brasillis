@@ -1,0 +1,39 @@
+<div class="boxprincipal">
+  <h1>Olá, {{ nome }}. Você tem {{ idade }}</h1>
+
+  <div class="botoes">
+    <button (click)="add()">Acrescenta</button>
+    <button (click)="sub()">Diminui</button>
+  </div>
+
+  <div class="botoes">
+    <ul>
+      <li
+        [ngClass]="l == 'Aprovado' ? 'fonteVerde' : 'fonteVermelha'"
+        *ngFor="let l of lista; index as i"
+      >
+        {{ i }} - {{ l }}
+      </li>
+    </ul>
+  </div>
+
+  <div
+    class="botoes"
+    [ngSwitch]="linguagem"
+    [ngStyle]="{ color: boolCorCSS ? 'green' : 'red' }"
+  >
+    <p *ngSwitchCase="'HTML'">Linguagem de marcação.</p>
+    <p *ngSwitchCase="'CSS'">Linguagem de estilo.</p>
+    <p *ngSwitchCase="'JS'">Linguagem de programação.</p>
+    <p *ngSwitchDefault>Linguagem não encontrada.</p>
+  </div>
+
+  <div class="botoes">
+    <button (click)="mensagem()">Mensagem</button>
+    <button (click)="exibirImagem()">{{ txtCaptionExibirImagem }}</button>
+  </div>
+
+  <div class="imagem" *ngIf="exibir">
+    <img (click)="mudaImagem()" [src]="imagem" /><br />
+  </div>
+</div>

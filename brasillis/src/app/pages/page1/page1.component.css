@@ -1,0 +1,42 @@
+.boxprincipal {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0px solid gray;
+    padding: 10px;
+}
+.imagem {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(230, 220, 220);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.botoes {
+    justify-content: center; /* Alinha os itens no centro horizontalmente */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    gap: 10px; /* Distanciamento entre os itens do Flex Box */
+    padding: 10px;
+    width: 500px;
+    border: 2px solid rgb(205, 216, 240);
+    display: flex;
+    flex-direction: row;
+}
+ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding-left: 0; /* Remove o espaço extra à esquerda, se necessário */
+}
+
+.fonteVerde {
+    color: green;
+}
+.fonteVermelha {
+    color: red;
+}
