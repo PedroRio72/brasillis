@@ -1,0 +1,30 @@
+form {
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Definindo o espaço entre os elementos */
+}
+.tabela {
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+  border: 2px solid gray;
+}
+.tabela th,
+.tabela td {
+  border: 1px solid gray; /* Borda interna entre as células */
+  padding: 10px; /* Espaçamento interno nas células */
+}
+
+.divbotoes {
+  /* border: 2px solid gray; */
+  margin: 20px auto;
+  width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}

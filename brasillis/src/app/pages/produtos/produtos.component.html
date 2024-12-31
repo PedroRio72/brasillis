@@ -1,0 +1,55 @@
+<form [formGroup]="formulario">
+
+    <!-- ID -->
+    <input type="text" name="id" formControlName="id" readonly class="form-control" />
+
+    <!-- NOME -->
+    <input type="text" name="nome" formControlName="nome" placeholder="nome" class="form-control" />
+    @if (formulario.get('nome').hasError('required')&&formulario.get('nome').touched) {
+    <div class="msgvalidaform">O campo nome é obrigatório.</div>
+    }
+    @if (formulario.get('nome').hasError('minlength')&&formulario.get('nome').touched) {
+    <div class="msgvalidaform">O campo nome precisa conter pelo menos 5 caracteres.</div>
+    }
+
+    <!-- VALOR -->
+    <input type="number" name="valor" formControlName="valor" placeholder="valor" class="form-control" />
+    @if (formulario.get('valor').hasError('required')&&formulario.get('valor').touched) {
+    <div class="msgvalidaform">O campo valor é obrigatório.</div>
+    }
+    @if (formulario.get('valor').hasError('min')&&formulario.get('valor').touched) {
+    <div class="msgvalidaform">Valor mínimo 0.</div>
+    }
+</form>
+
+<div class="divbotoes">
+    @if (blnCadastrar) {
+    <input type="button" value="Cadastrar" (click)="incluir()" class="btn btn-primary"
+        [disabled]="formulario.invalid" />
+    }@else{
+    <input type="button" value="Alterar" (click)="alterar()" class="btn btn-primary" [disabled]="formulario.invalid" />
+    <input type="button" value="Remover" (click)="remover()" class="btn btn-primary" />
+    <input type="button" value="Cancelar" (click)="cancelar()" class="btn btn-primary" />
+    }
+</div>
+
+<table class="tabela">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Valor</th>
+            <th>Selecionar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of produtos; index as i">
+            <td>{{p.id}}</td>
+            <td>{{p.nome | uppercase}}</td>
+            <td>{{p.valor | currency:'R$ ' }}</td>
+            <td><!-- Ícone de edição -->
+                <i class="fas fa-edit" style="cursor: pointer;" (click)="selecionar(i)"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>

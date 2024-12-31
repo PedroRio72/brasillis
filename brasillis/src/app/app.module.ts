@@ -8,9 +8,11 @@ import { ControlflowComponent } from './controlflow/controlflow.component';
 import { ModalComponent } from './modal/modal.component';
 import { FormulariosComponent } from './formularios/formularios.component';
 import { ReactformComponent } from './reactform/reactform.component';
-import { Clientes1Component } from './clientes1/clientes1.component';
+import { Clientes1Component } from './pages/clientes1/clientes1.component';
 import { MediaPipe } from './pipies/media.pipe';
 import { NotasComponent } from './pages/notas/notas.component';
+import { ProdutosComponent } from './pages/produtos/produtos.component';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, ModalComponent, MediaPipe, NotasComponent],
@@ -22,8 +24,9 @@ import { NotasComponent } from './pages/notas/notas.component';
     FormulariosComponent,
     ReactformComponent,
     Clientes1Component,
+    ProdutosComponent,
   ],
-  providers: [],
+  providers: [provideHttpClient(withFetch())],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
