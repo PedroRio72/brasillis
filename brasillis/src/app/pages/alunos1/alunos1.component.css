@@ -1,0 +1,10 @@
+.divbotoes {
+  /* border: 2px solid gray; */
+  margin: 20px auto;
+  width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}

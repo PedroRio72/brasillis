@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Produto } from '../../modelo/Produto';
+import { MatButtonModule } from '@angular/material/button';
 import {
   FormControl,
   FormGroup,
@@ -12,7 +13,7 @@ import { ProdutoService } from '../../servico/produto.service';
 @Component({
   selector: 'app-produtos',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, MatButtonModule],
   templateUrl: './produtos.component.html',
   styleUrl: './produtos.component.css',
 })

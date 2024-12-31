@@ -1,9 +1,9 @@
 {
   "produtos": [
     {
-      "nome": "Galaxy S24",
-      "valor": 5000,
-      "id": 10
+      "id": 10,
+      "nome": "Galaxy S24b",
+      "valor": 5000
     },
     {
       "id": 20,

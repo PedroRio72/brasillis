@@ -1,0 +1,14 @@
+<table class="tabela">
+    <thead>
+        <tr>
+            <th style="width: 10%">#</th>
+            <th>Alunos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let l of lista; let i=index;">
+            <td>{{i}}</td>
+            <td>{{l}}</td>
+        </tr>
+    </tbody>
+</table>
