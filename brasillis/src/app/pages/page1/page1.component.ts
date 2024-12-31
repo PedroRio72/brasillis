@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-pag1',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './page1.component.html',
   styleUrl: './page1.component.css',
 })
-export class HomeComponent {
+export class Pag1Component {
   nome: string = 'Teste';
   idade: number = 20;
   imagem: string = '../../../assets/dia.jpg';

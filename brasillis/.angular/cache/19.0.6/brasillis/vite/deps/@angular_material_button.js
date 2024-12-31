@@ -1,7 +1,7 @@
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-DWSMBFC2.js";
+} from "./chunk-CCTFHVLE.js";
 import {
   ANIMATION_MODULE_TYPE,
   APP_ID,
@@ -32,6 +32,8 @@ import {
   Version,
   ViewChild,
   ViewEncapsulation,
+  __spreadProps,
+  __spreadValues,
   afterNextRender,
   booleanAttribute,
   combineLatest,
@@ -82,11 +84,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-PO6ZLEGG.js";
-import {
-  __spreadProps,
-  __spreadValues
-} from "./chunk-EPAV4CNQ.js";
+} from "./chunk-QMIZKN3D.js";
 
 // node_modules/@angular/cdk/fesm2022/platform.mjs
 var hasV8BreakIterator;

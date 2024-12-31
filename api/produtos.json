@@ -1,11 +1,6 @@
 {
   "produtos": [
     {
-      "id": 10,
-      "nome": "Galaxy S24b",
-      "valor": 5000
-    },
-    {
       "id": 20,
       "nome": "iPhone 15s",
       "valor": 7000
@@ -14,6 +9,16 @@
       "id": 23,
       "nome": "Motorola Razor",
       "valor": 2500
+    },
+    {
+      "id": 24,
+      "nome": "Ericson",
+      "valor": 3800
+    },
+    {
+      "id": 25,
+      "nome": "PEDRO P S BARBOSA",
+      "valor": 1
     }
   ]
 }

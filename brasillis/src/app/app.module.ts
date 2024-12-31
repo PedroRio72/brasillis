@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/page1/page1.component';
+import { Pag1Component } from './pages/page1/page1.component';
 import { ControlflowComponent } from './controlflow/controlflow.component';
 import { ModalComponent } from './modal/modal.component';
 import { FormulariosComponent } from './formularios/formularios.component';
@@ -18,6 +18,8 @@ import { Form1Component } from './formularios/form1/form1.component';
 import { Lista1Component } from './listas/lista1/lista1.component';
 import { Alunos1Component } from './pages/alunos1/alunos1.component';
 import { BotaoComponent } from './botao/botao.component';
+import { MenuComponent } from './menu/menu.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { BotaoComponent } from './botao/botao.component';
     BrowserModule,
     AppRoutingModule,
     HomeComponent,
+    Pag1Component,
     ControlflowComponent,
     FormulariosComponent,
     ReactformComponent,
@@ -39,6 +42,7 @@ import { BotaoComponent } from './botao/botao.component';
     Form1Component,
     Lista1Component,
     BotaoComponent,
+    MenuComponent,
   ],
   providers: [provideHttpClient(withFetch()), provideAnimationsAsync()],
   bootstrap: [AppComponent],
